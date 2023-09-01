@@ -1,19 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<!-- the textView doesn't come with text because that's edited in mainActivity from the buttons -->
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="40dp"
+        android:textSize="80sp"
+        android:id="@+id/number"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"/>
+    <!-- Every button here is fundementaly the same aside from the zero button which is double the legnth of any button
+    aside from that they all pull from the same xml file to edit them
+    their heights and widths are all the same
+    they all go below something and all have the same exit margin size -->
+    <Button
+        android:id ="@+id/clear"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/number"
+        android:background="@drawable/btn_file"
+        android:text="@string/clear"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/posorneg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/number"
+        android:layout_toRightOf="@id/clear"
+        android:background="@drawable/btn_file"
+        android:text="@string/negorpos"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
+
+    <Button
+        android:id="@+id/percent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/number"
+        android:layout_toRightOf="@id/posorneg"
+        android:background="@drawable/btn_file"
+        android:text="@string/percent"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
+
+    <Button
+        android:id = "@+id/divide"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/number"
+        android:layout_toRightOf="@id/percent"
+        android:background="@drawable/btn_file"
+        android:text="@string/divide"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
+    <Button
+        android:id="@+id/seven"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/clear"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/seven"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/clear"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:layout_toRightOf="@id/seven"
+        android:text="@string/eight"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/clear"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/nine"
+        android:layout_toRightOf="@id/eight"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/clear"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/multipy"
+        android:layout_toRightOf="@id/nine"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/four"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/seven"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/four"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
+    <Button
+        android:id="@+id/five"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/seven"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/five"
+        android:layout_toRightOf="@id/four"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/six"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/seven"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/six"
+        android:layout_toRightOf="@id/five"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/subtract"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/seven"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/subtract"
+        android:layout_toRightOf="@id/six"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/four"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/one"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
+    <Button
+        android:id="@+id/two"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/four"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/two"
+        android:layout_toRightOf="@id/one"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/three"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/four"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/three"
+        android:layout_toRightOf="@id/two"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/four"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/add"
+        android:layout_toRightOf="@id/three"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/one"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/zero"
+        android:textSize="30sp"
+        android:layout_marginLeft="2dp"
+        />
+    <Button
+        android:id="@+id/decimal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/one"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/decimal"
+        android:layout_toRightOf="@id/zero"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/equals"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/one"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_file"
+        android:text="@string/equals"
+        android:layout_toRightOf="@id/decimal"
+        android:layout_marginLeft="2dp"
+        android:textSize="30sp"/>
+
+</RelativeLayout>
