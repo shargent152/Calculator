@@ -17,10 +17,21 @@ class MainActivity : AppCompatActivity() {
         // adds text view so you can edit number
         var number = findViewById<TextView>(R.id.number)
         number.setText("0")
-        // resets the textView back to zero
+        // Figures out which equation button was pushed
+        var selector = 0
+        //works the same as numequation but for equation
+        var forequals = false
+        // This variable saves the first provided number when a equation button is pushed
+        var firstNum = ""
+
+        // this is the clear button is resets everything to the original state
         var clearButton = findViewById<Button>(R.id.clear)
         clearButton.setOnClickListener{
             number.setText("0")
+            numequation = false
+            forequals = false
+            selector = 0
+            firstNum = ""
         }
         // button to make the function pos or neg
         var posornegButton = findViewById<Button>(R.id.posorneg)
@@ -210,12 +221,6 @@ class MainActivity : AppCompatActivity() {
         //end of number buttons
 
 
-        // This variable saves the first provided number when a equation button is pushed
-        var firstNum = ""
-        // Figures out which button was pushed
-        var selector = 0
-        // works the same way as numequation but for the equation buttons
-        var forequals = false
         // This button does the dividing
         // All the equation buttons are practically the same
         // For instance first it checks if the selector is zero to make sure no other equation has been selected
