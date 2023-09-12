@@ -1,5 +1,5 @@
 # Landscape Calculator
-the same as the orgianl calculator but now it can rotate
+the same as the original calculator but now it can rotate
 ## Functionality
 * The user can rotate the phone and save the number in the calculator
 * The user when the phone rotates can use the sin, cos, tan, log10, and ln buttons
@@ -9,7 +9,7 @@ the same as the orgianl calculator but now it can rotate
 ![landscapecal](https://github.com/shargent152/Calculator/assets/125781283/4793a6cd-867d-4388-9105-8180e9ba6ffd)
 ## Notes
 onset is a very powerful tool but can be very hard to understand at first
-everything else was fairly easy because it was the same as the orgianl calculator
+everything else was fairly easy because it was the same as the original calculator
 
 ## License
 
